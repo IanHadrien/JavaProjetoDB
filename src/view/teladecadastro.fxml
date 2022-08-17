@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.telaDeCadastroController">
+  <children>
+    <AnchorPane maxHeight="-1.0" maxWidth="-1.0" prefHeight="-1.0" prefWidth="-1.0" VBox.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="900.0" fitWidth="1010.0" layoutY="-300.0" onMouseDragged="#event" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/imagemFundo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="600.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/ImagemBarraMenu.png" />
+               </image>
+               <effect>
+                  <Shadow height="0.0" radius="2.55" width="12.2">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Shadow>
+               </effect>
+            </ImageView>
+            <ImageView fitHeight="68.0" fitWidth="91.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/ImagemLogo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="646.0" fitWidth="410.0" layoutX="333.0" layoutY="-21.0" pickOnBounds="true" preserveRatio="true" rotate="90.0">
+               <image>
+                  <Image url="@../imagens/ImagemTransparente.png" />
+               </image>
+            </ImageView>
+            <Text fill="WHITE" layoutX="607.0" layoutY="228.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Selecione o tipo de Plano:" wrappingWidth="212.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="277.0" layoutY="227.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Data de Nascimento:" wrappingWidth="174.0">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text fill="WHITE" layoutX="277.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Nome:" wrappingWidth="53.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Text layoutX="277.0" layoutY="69.0" strokeType="OUTSIDE" strokeWidth="0.0" text="CADASTRO DE PACIENTE" textAlignment="CENTER" wrappingWidth="312.0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+               <fill>
+                  <RadialGradient centerX="0.5" centerY="0.5" radius="0.5">
+                     <stops>
+                        <Stop>
+                           <color>
+                              <Color red="0.24646686017513275" green="0.3167824149131775" blue="0.44736841320991516" />
+                           </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </Stop>
+                     </stops>
+                  </RadialGradient>
+               </fill>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Text>
+            <TextField fx:id="campoNome" layoutX="277.0" layoutY="159.0" prefHeight="27.0" prefWidth="292.0" style="-fx-border-color: #0598ff;" />
+            <TextField fx:id="campoTelefone" layoutX="607.0" layoutY="159.0" prefHeight="25.0" prefWidth="174.0" style="-fx-border-color: #0598ff;" />
+            <DatePicker fx:id="campoDataNascimento" layoutX="277.0" layoutY="234.0" style="-fx-border-color: #0598ff;" />
+            <Text fill="WHITE" layoutX="607.0" layoutY="156.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Telefone:" wrappingWidth="77.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <Button fx:id="botaoLogin" layoutX="289.0" layoutY="384.0" mnemonicParsing="false" onAction="#btnSalvar" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #0598ff;" text="Salvar" textFill="WHITE" />
+            <Button fx:id="botaoLogin1" layoutX="532.0" layoutY="384.0" mnemonicParsing="false" onAction="#btnCancelar" prefHeight="42.0" prefWidth="150.0" style="-fx-background-color: #FF0000;" text="Cancelar" textFill="WHITE" />
+            <Button fx:id="cadastro" layoutX="13.0" layoutY="32.0" mnemonicParsing="false" onAction="#btnCadastro" prefHeight="53.0" prefWidth="60.0" style="-fx-background-color: #0598ff;">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="52.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/ImagemCadastro.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="Lista" layoutX="13.0" layoutY="129.0" mnemonicParsing="false" onAction="#btnLista" prefHeight="53.0" prefWidth="49.0" style="-fx-background-color: #0598ff;">
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/ImagemListaFila.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="butaoTelatorios" layoutX="13.0" layoutY="239.0" mnemonicParsing="false" onAction="#btnRelatorios" prefHeight="61.0" prefWidth="68.0" style="-fx-background-color: #0598ff;">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/ImagemRelatorios.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <RadioButton fx:id="comun" layoutX="602.0" layoutY="253.0" mnemonicParsing="false" text="Comum">
+               <toggleGroup>
+                  <ToggleGroup fx:id="planos" />
+               </toggleGroup>
+            </RadioButton>
+            <RadioButton fx:id="master" layoutX="713.0" layoutY="253.0" mnemonicParsing="false" text="Master" toggleGroup="$planos" />
+            <TextField fx:id="campoValor" layoutX="277.0" layoutY="312.0" prefHeight="27.0" prefWidth="176.0" style="-fx-border-color: #0598ff;" />
+            <Text fill="WHITE" layoutX="277.0" layoutY="307.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Valor da Consulta:" wrappingWidth="243.13671875">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+         </children>
+    </AnchorPane>
+  </children>
+</VBox>

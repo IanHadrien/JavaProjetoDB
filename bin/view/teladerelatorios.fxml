@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--
+  Copyright (c) 2015, 2019, Gluon and/or its affiliates.
+  All rights reserved. Use is subject to license terms.
+
+  This file is available and licensed under the following license:
+
+  Redistribution and use in source and binary forms, with or without
+  modification, are permitted provided that the following conditions
+  are met:
+
+  - Redistributions of source code must retain the above copyright
+    notice, this list of conditions and the following disclaimer.
+  - Redistributions in binary form must reproduce the above copyright
+    notice, this list of conditions and the following disclaimer in
+    the documentation and/or other materials provided with the distribution.
+  - Neither the name of Oracle Corporation nor the names of its
+    contributors may be used to endorse or promote products derived
+    from this software without specific prior written permission.
+
+  THIS SOFTWARE IS PROVIDED BY THE COPYRIGHT HOLDERS AND CONTRIBUTORS
+  "AS IS" AND ANY EXPRESS OR IMPLIED WARRANTIES, INCLUDING, BUT NOT
+  LIMITED TO, THE IMPLIED WARRANTIES OF MERCHANTABILITY AND FITNESS FOR
+  A PARTICULAR PURPOSE ARE DISCLAIMED. IN NO EVENT SHALL THE COPYRIGHT
+  OWNER OR CONTRIBUTORS BE LIABLE FOR ANY DIRECT, INDIRECT, INCIDENTAL,
+  SPECIAL, EXEMPLARY, OR CONSEQUENTIAL DAMAGES (INCLUDING, BUT NOT
+  LIMITED TO, PROCUREMENT OF SUBSTITUTE GOODS OR SERVICES; LOSS OF USE,
+  DATA, OR PROFITS; OR BUSINESS INTERRUPTION) HOWEVER CAUSED AND ON ANY
+  THEORY OF LIABILITY, WHETHER IN CONTRACT, STRICT LIABILITY, OR TORT
+  (INCLUDING NEGLIGENCE OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE
+  OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
+-->
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Shadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<VBox prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.teladerelatoriosController">
+   <children>
+      <AnchorPane prefHeight="604.0" prefWidth="900.0">
+         <children>
+            <ImageView fitHeight="900.0" fitWidth="956.0" layoutY="-300.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/imagemFundo.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="600.0" fitWidth="174.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/ImagemBarraMenu.png" />
+               </image>
+               <effect>
+                  <Shadow height="0.0" radius="2.55" width="12.2">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Shadow>
+               </effect>
+            </ImageView>
+            <ImageView fx:id="logo" fitHeight="68.0" fitWidth="91.0" layoutY="525.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../imagens/ImagemLogo.png" />
+               </image>
+            </ImageView>
+            <Button fx:id="botaoTelaCadastro" layoutX="13.0" layoutY="32.0" mnemonicParsing="false" onAction="#btnCadastro" prefHeight="53.0" prefWidth="60.0" style="-fx-background-color: #0598ff;">
+               <graphic>
+                  <ImageView fitHeight="48.0" fitWidth="52.0" layoutX="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/ImagemCadastro.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="botaoTelaLista" layoutX="13.0" layoutY="129.0" mnemonicParsing="false" onAction="#btnLista" prefHeight="53.0" prefWidth="49.0" style="-fx-background-color: #0598ff;">
+               <graphic>
+                  <ImageView fitHeight="54.0" fitWidth="51.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/ImagemListaFila.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Button fx:id="botaoRelatorios" layoutX="13.0" layoutY="239.0" mnemonicParsing="false" onAction="#btnRelarios" prefHeight="61.0" prefWidth="68.0" style="-fx-background-color: #0598ff;">
+               <graphic>
+                  <ImageView fitHeight="44.0" fitWidth="53.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../imagens/ImagemRelatorios.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Button>
+            <Text fill="WHITE" layoutX="107.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pesquisar por:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Text>
+            <TableView fx:id="tabelaRelatorios" layoutX="91.0" layoutY="92.0" prefHeight="435.0" prefWidth="809.0">
+              <columns>
+                <TableColumn fx:id="colunaNome" prefWidth="506.0" text="Nome" />
+                <TableColumn fx:id="colunaPlano" minWidth="0.0" prefWidth="176.0" text="Plano" />
+                  <TableColumn fx:id="colunaValor" prefWidth="126.0" text="Valor Pago" />
+              </columns>
+            </TableView>
+            <TextArea fx:id="texteTotal" layoutX="107.0" layoutY="537.0" prefHeight="24.0" prefWidth="325.0" />
+            <TextArea fx:id="textQuantidade" layoutX="496.0" layoutY="536.0" prefHeight="24.0" prefWidth="325.0" />
+            <Button fx:id="Comum" layoutX="112.0" layoutY="54.0" mnemonicParsing="false" onAction="#btnComum" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: #0598ff;" text="Comum">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+            <Button fx:id="Master" layoutX="235.0" layoutY="54.0" mnemonicParsing="false" onAction="#btnMaster" prefHeight="31.0" prefWidth="101.0" style="-fx-background-color: #0598ff;" text="Master">
+               <effect>
+                  <DropShadow />
+               </effect>
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+   </children>
+</VBox>
